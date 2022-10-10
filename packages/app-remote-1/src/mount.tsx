@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 
 export const mountAppRemote1 = () => {
-  const id = "root";
+  const id = "app-remote-1";
   const rootContainer =
     document.getElementById(id) ||
     document.body.appendChild(

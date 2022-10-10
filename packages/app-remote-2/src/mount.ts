@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 
 export const mountAppRemote2 = () => {
-  const id = "root";
+  const id = "app-remote-2";
   const rootContainer =
     document.getElementById(id) ||
     document.body.appendChild(
