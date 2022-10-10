@@ -2,19 +2,31 @@
   "name": "app-remote-1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "main.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack build -c webpack.prod.ts",
+    "dev": "webpack serve -c webpack.dev.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eunsukimme/micro-frontend-on-aws.git"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eunsukimme/micro-frontend-on-aws/issues"
-  },
-  "homepage": "https://github.com/eunsukimme/micro-frontend-on-aws#readme"
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "babel-loader": "^8.2.5",
+    "core-js": "^3.25.5",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "style-loader": "^3.3.1",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "webpack": "^5.74.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  }
 }
