@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 
-export const mountAppHost = () => {
+export const mountAppRemote1 = () => {
   const id = "root";
   const rootContainer =
     document.getElementById(id) ||

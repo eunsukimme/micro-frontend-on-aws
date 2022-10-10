@@ -1,0 +1,19 @@
+{
+  "plugins": [["@vue/babel-plugin-jsx"]],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "corejs": 3,
+        "useBuiltIns": "usage"
+      }
+    ],
+    [
+      "@babel/preset-typescript",
+      {
+        "allExtensions": true,
+        "isTSX": true
+      }
+    ]
+  ]
+}
