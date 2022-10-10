@@ -1,0 +1,20 @@
+{
+  "name": "app-remote-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eunsukimme/micro-frontend-on-aws.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eunsukimme/micro-frontend-on-aws/issues"
+  },
+  "homepage": "https://github.com/eunsukimme/micro-frontend-on-aws#readme"
+}
