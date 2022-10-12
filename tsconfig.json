@@ -3,6 +3,7 @@
     "target": "ESNext",
     "module": "ES2015",
     "lib": ["ESNext", "DOM"],
+    "moduleResolution": "node",
     "strict": true,
     "strictPropertyInitialization": false,
     "noUnusedLocals": false,
