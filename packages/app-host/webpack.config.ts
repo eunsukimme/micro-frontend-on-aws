@@ -1,5 +1,5 @@
 import { resolve } from "path";
-import { Configuration, DefinePlugin } from "webpack";
+import { Configuration, DefinePlugin, container } from "webpack";
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
@@ -35,6 +35,12 @@ const config: Configuration = {
   plugins: [
     new DefinePlugin({
       "process.env": JSON.stringify(process.env),
+    }),
+    new container.ModuleFederationPlugin({
+      name: "appHost",
+      remotes: {
+        appRemote1: "appRemote1@http://localhost:3001/remoteEntry.js",
+      },
     }),
   ],
 };
