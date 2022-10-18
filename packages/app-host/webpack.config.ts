@@ -2,6 +2,7 @@ import { resolve } from "path";
 import { Configuration, DefinePlugin, container } from "webpack";
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
+import { dependencies } from './package.json'
 
 const config: Configuration = {
   entry: resolve(__dirname, "main.ts"),
@@ -38,6 +39,10 @@ const config: Configuration = {
       remotes: {
         appRemote1: "appRemote1@http://localhost:30001/remoteEntry.js",
       },
+      shared: {
+        react: { singleton: true, requiredVersion: dependencies['react'] },
+        'react-dom': { singleton: true, requiredVersion: dependencies['react-dom'] }
+      }
     }),
   ],
 };
