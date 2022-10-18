@@ -9,7 +9,6 @@ const developmentConfig: Configuration = {
   mode: "development",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: "/",
   },
   module: {
     rules: [
@@ -33,7 +32,7 @@ const developmentConfig: Configuration = {
     historyApiFallback: { index: "/index.html" },
     hot: true,
     host: "localhost",
-    port: 3002,
+    port: 30002,
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -1,6 +1,6 @@
 import { resolve } from "path";
 import { VueLoaderPlugin } from "vue-loader";
-import { Configuration, DefinePlugin } from "webpack";
+import { Configuration, DefinePlugin, container } from "webpack";
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
@@ -40,6 +40,13 @@ const config: Configuration = {
       __VUE_PROD_DEVTOOLS__: true,
     }),
     new VueLoaderPlugin(),
+    new container.ModuleFederationPlugin({
+      name: "appRemote2",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./mount": "./src/mount.ts",
+      },
+    }),
   ],
 };
 

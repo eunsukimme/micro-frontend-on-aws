@@ -38,6 +38,7 @@ const config: Configuration = {
       name: "appHost",
       remotes: {
         appRemote1: "appRemote1@http://localhost:30001/remoteEntry.js",
+        appRemote2: "appRemote2@http://localhost:30002/remoteEntry.js"
       },
       shared: {
         react: { singleton: true, requiredVersion: dependencies['react'] },
