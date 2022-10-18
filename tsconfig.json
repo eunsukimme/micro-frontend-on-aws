@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ES2015",
+    "module": "CommonJS",
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "strict": true,
     "strictPropertyInitialization": false,
     "noUnusedLocals": false,
     "inlineSourceMap": true,
     "inlineSources": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", "cdk.out"]
 }
