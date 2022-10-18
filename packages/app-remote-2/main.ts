@@ -1,6 +1,6 @@
 const main = async () => {
-  const { mountAppRemote2 } = await import("./src/mount");
-  mountAppRemote2();
+  const { mount } = await import("./src/mount");
+  mount();
 };
 
 export default main;
