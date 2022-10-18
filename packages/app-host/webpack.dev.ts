@@ -31,7 +31,7 @@ const developmentConfig: Configuration = {
     historyApiFallback: { index: "/index.html" },
     hot: true,
     host: "localhost",
-    port: 3000,
+    port: 30000,
   },
   plugins: [
     new HtmlWebpackPlugin({

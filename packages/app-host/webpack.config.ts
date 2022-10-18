@@ -5,9 +5,6 @@ const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
 const config: Configuration = {
   entry: resolve(__dirname, "main.ts"),
-  output: {
-    path: resolve(__dirname, "dist"),
-  },
   module: {
     rules: [
       {
@@ -39,7 +36,7 @@ const config: Configuration = {
     new container.ModuleFederationPlugin({
       name: "appHost",
       remotes: {
-        appRemote1: "appRemote1@http://localhost:3001/remoteEntry.js",
+        appRemote1: "appRemote1@http://localhost:30001/remoteEntry.js",
       },
     }),
   ],

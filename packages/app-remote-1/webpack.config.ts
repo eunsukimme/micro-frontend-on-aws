@@ -5,9 +5,6 @@ const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
 const config: Configuration = {
   entry: resolve(__dirname, "main.ts"),
-  output: {
-    path: resolve(__dirname, "dist"),
-  },
   module: {
     rules: [
       {
