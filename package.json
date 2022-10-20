@@ -9,11 +9,13 @@
   ],
   "scripts": {
     "build": "tsc",
+    "build:lambda": "tsc ./cdk/lambda/handler.ts",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.108",
     "@types/jest": "^27.5.2",
     "@types/node": "10.17.27",
     "@types/prettier": "2.6.0",
