@@ -9,7 +9,9 @@
   ],
   "scripts": {
     "build": "tsc",
-    "build:lambda": "tsc ./cdk/lambda/handler.ts",
+    "build:lambda": "tsc ./cdk/lambda/*",
+    "deploy": "npm run build:lambda && cdk deploy --all",
+    "deploy:hotswap": "npm run build:lambda && cdk deploy --hotswap",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
