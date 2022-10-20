@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.ts",
   "scripts": {
-    "build": "webpack build -c webpack.prod.ts",
+    "build": "WEBPACK_PUBLIC_PATH='/app-remote-2/' webpack build -c webpack.prod.ts",
     "dev": "webpack serve -c webpack.dev.ts"
   },
   "dependencies": {

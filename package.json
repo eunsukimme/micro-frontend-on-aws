@@ -9,12 +9,12 @@
   ],
   "scripts": {
     "build": "tsc",
-    "build:lambda": "tsc ./cdk/lambda/*",
-    "deploy": "npm run build:lambda && cdk deploy --all",
-    "deploy:hotswap": "npm run build:lambda && cdk deploy --hotswap",
+    "build:lambda": "tsc ./cdk/lambda/*.ts",
+    "cdk": "cdk",
+    "cdk:deploy": "npm run build:lambda && cdk deploy --all --outputs-file ./cdk-outputs.json",
+    "cdk:deploy:hotswap": "npm run build:lambda && cdk deploy --hotswap",
     "watch": "tsc -w",
-    "test": "jest",
-    "cdk": "cdk"
+    "test": "jest"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.108",

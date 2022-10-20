@@ -5,6 +5,7 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+cdk-outputs.json
 
 # build output
 dist
