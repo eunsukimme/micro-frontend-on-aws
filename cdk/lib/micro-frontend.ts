@@ -67,15 +67,13 @@ export class MicroFrontendStack extends cdk.Stack {
     );
 
     // NOTE: CF distribution output
-    const distributionOutput = new cdk.CfnOutput(
-      this,
-      `${stackPrefix}-cloudfront-output`,
-      {
-        value: distribution.distributionDomainName,
-        description: "The distribution domain name of CloudFront",
-      }
-    );
-
-    console.log("distribution name output 👉", distributionOutput.value);
+    new cdk.CfnOutput(this, `${stackPrefix}-cf-distribution-domain-name`, {
+      value: distribution.distributionDomainName,
+      description: "The distribution domain name of CloudFront",
+    });
+    new cdk.CfnOutput(this, `${stackPrefix}-cf-distribution-id`, {
+      value: distribution.distributionId,
+      description: "The distribution ID of CloudFront",
+    });
   }
 }

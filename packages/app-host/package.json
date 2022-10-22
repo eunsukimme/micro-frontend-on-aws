@@ -5,6 +5,7 @@
   "main": "main.ts",
   "scripts": {
     "build": "NODE_ENV='production' WEBPACK_PUBLIC_PATH='/app-host/' webpack build -c webpack.prod.ts",
+    "deploy": "ts-node ../../cli/deploy.ts --app=app-host",
     "dev": "webpack serve -c webpack.dev.ts"
   },
   "dependencies": {

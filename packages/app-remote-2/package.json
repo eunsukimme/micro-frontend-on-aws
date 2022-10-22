@@ -5,6 +5,7 @@
   "main": "main.ts",
   "scripts": {
     "build": "WEBPACK_PUBLIC_PATH='/app-remote-2/' webpack build -c webpack.prod.ts",
+    "deploy": "ts-node ../../cli/deploy.ts --app=app-remote-2",
     "dev": "webpack serve -c webpack.dev.ts"
   },
   "dependencies": {

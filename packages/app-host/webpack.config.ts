@@ -5,7 +5,8 @@ const extensions = [".js", ".jsx", ".ts", ".tsx"];
 import { dependencies } from "./package.json";
 import { MicroFrontendStack } from "../../cdk-outputs.json";
 
-const distributionURL = MicroFrontendStack.awscommunityday2022cloudfrontoutput;
+const distributionURL =
+  MicroFrontendStack.awscommunityday2022cfdistributiondomainname;
 
 const getRemoteEntry = (appName: string, port?: number) => {
   if (process.env.NODE_ENV === "production") {
