@@ -3,19 +3,19 @@ import React, { Suspense, useEffect } from "react";
 const AppRemote1 = React.lazy(() => import("appRemote1/App"));
 
 const App = () => {
-
   useEffect(() => {
     let app: { unmount(): void };
     async function mountAppRemote2() {
-      const { mount } = await import('appRemote2/mount')
+      // @ts-ignore
+      const { mount } = await import("appRemote2/mount");
       app = mount();
     }
     mountAppRemote2();
 
     return () => {
       app?.unmount();
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <div>
