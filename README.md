@@ -73,7 +73,7 @@ Navigate to `/app-host`, `/app-remote-1` and `/app-remote-2` and see what happen
 
 ## Architecture Diagram
 
-![Architecture Diagram](/public/architecture-diagram.png?raw=true "Architecture Diagram")
+![Architecture Diagram](/architecture-diagram.png?raw=true "Architecture Diagram")
 
 ## Directory Structure
 
