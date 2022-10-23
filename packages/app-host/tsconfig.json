@@ -13,7 +13,8 @@
     "resolveJsonModule": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "appRemote1/*": ["../app-remote-1/src/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"]
