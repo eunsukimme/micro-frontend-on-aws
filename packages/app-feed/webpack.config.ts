@@ -41,7 +41,7 @@ const config: Configuration = {
     }),
     new VueLoaderPlugin(),
     new container.ModuleFederationPlugin({
-      name: "appRemote2",
+      name: "appFeed",
       filename: "remoteEntry.js",
       exposes: {
         "./mount": "./src/mount.ts",

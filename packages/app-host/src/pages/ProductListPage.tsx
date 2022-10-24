@@ -6,12 +6,12 @@ const ProductListPage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     let app: { unmount(): void };
-    async function mountAppRemote2() {
+    async function mountAppFeed() {
       // @ts-ignore
-      const { mount } = await import("appRemote2/mount");
+      const { mount } = await import("appFeed/mount");
       app = mount();
     }
-    mountAppRemote2();
+    mountAppFeed();
 
     return () => {
       app?.unmount();
@@ -35,7 +35,7 @@ const ProductListPage = () => {
       <h1 style={{ fontSize: "2rem", margin: "0.67em 0", fontWeight: "bold" }}>
         Trending
       </h1>
-      <div id="app-remote-2"></div>
+      <div id="app-feed"></div>
     </AppLayout>
   );
 };

@@ -50,7 +50,7 @@ const config: Configuration = {
       name: "appHost",
       remotes: {
         appOrder: `appOrder@${getRemoteEntry("app-order", 30001)}`,
-        appRemote2: `appRemote2@${getRemoteEntry("app-remote-2", 30002)}`,
+        appFeed: `appFeed@${getRemoteEntry("app-feed", 30002)}`,
       },
       shared: {
         ...dependencies,
