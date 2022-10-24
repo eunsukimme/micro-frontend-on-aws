@@ -27,6 +27,7 @@ export const productionConfig: Configuration = {
               importLoaders: 1,
             },
           },
+          "postcss-loader",
         ],
       },
     ],
