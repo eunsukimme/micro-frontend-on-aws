@@ -12,7 +12,7 @@ import { onMounted, ref } from "vue";
 const products = ref<Product[]>([]);
 
 onMounted(async () => {
-  products.value = await fetch("https://dummyjson.com/products")
+  products.value = await fetch("https://dummyjson.com/products?limit=20")
     .then((res) => res.json())
     .then((data) => data.products);
 });
