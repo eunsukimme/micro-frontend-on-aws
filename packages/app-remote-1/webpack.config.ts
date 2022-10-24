@@ -41,6 +41,7 @@ const config: Configuration = {
         "./App": "./src/App.tsx",
       },
       shared: {
+        ...dependencies,
         react: { singleton: true, requiredVersion: dependencies["react"] },
         "react-dom": {
           singleton: true,

@@ -52,6 +52,7 @@ const config: Configuration = {
         appRemote2: `appRemote2@${getRemoteEntry("app-remote-2", 30002)}`,
       },
       shared: {
+        ...dependencies,
         react: { singleton: true, requiredVersion: dependencies["react"] },
         "react-dom": {
           singleton: true,
