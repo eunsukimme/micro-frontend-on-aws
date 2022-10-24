@@ -1,5 +1,6 @@
 import { resolve } from "path";
 import { Configuration, DefinePlugin, container } from "webpack";
+import { dependencies } from "./package.json";
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
@@ -37,7 +38,14 @@ const config: Configuration = {
       name: "appRemote1",
       filename: "remoteEntry.js",
       exposes: {
-        "./App": "./src/App",
+        "./App": "./src/App.tsx",
+      },
+      shared: {
+        react: { singleton: true, requiredVersion: dependencies["react"] },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: dependencies["react-dom"],
+        },
       },
     }),
   ],

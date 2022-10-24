@@ -22,6 +22,7 @@ const developmentConfig: Configuration = {
               importLoaders: 1,
             },
           },
+          "postcss-loader",
         ],
       },
     ],
