@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import ProductList from "components/ProductList.vue";
+import ProductList from "./components/ProductList.vue";
 import { Product } from "types/product";
 import { onMounted, ref } from "vue";
 const products = ref<Product[]>([]);

@@ -19,15 +19,33 @@ const productionConfig: Configuration = {
     rules: [
       {
         test: /\.s?css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
+        oneOf: [
           {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-            },
+            resourceQuery: /module/,
+            use: [
+              MiniCssExtractPlugin.loader,
+              {
+                loader: "css-loader",
+                options: {
+                  importLoaders: 1,
+                  modules: true,
+                },
+              },
+              "sass-loader",
+            ],
           },
-          "sass-loader",
+          {
+            use: [
+              MiniCssExtractPlugin.loader,
+              {
+                loader: "css-loader",
+                options: {
+                  importLoaders: 1,
+                },
+              },
+              "sass-loader",
+            ],
+          },
         ],
       },
     ],

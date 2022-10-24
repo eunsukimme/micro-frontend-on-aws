@@ -13,7 +13,7 @@ export const mountAppRemote1 = () => {
   const root = createRoot(rootContainer);
   root.render(
     <StrictMode>
-      <App />
+      <App productId={2} />
     </StrictMode>
   );
 };
