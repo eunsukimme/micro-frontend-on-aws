@@ -1,9 +1,7 @@
 <template>
-  <div :class="$style.container">
-    <div v-if="!products">loading products...</div>
-    <div v-else>
-      <ProductList :products="products" />
-    </div>
+  <div v-if="!products">loading products...</div>
+  <div v-else>
+    <ProductList :products="products" />
   </div>
 </template>
 
@@ -19,10 +17,3 @@ onMounted(async () => {
     .then((data) => data.products);
 });
 </script>
-
-<style lang="scss" module>
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-</style>

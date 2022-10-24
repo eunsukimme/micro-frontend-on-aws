@@ -30,7 +30,7 @@ const ProductListPage = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
       <h1 style={{ fontSize: "2rem", margin: "0.67em 0", fontWeight: "bold" }}>
         Trending
       </h1>
