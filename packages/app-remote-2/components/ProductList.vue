@@ -11,7 +11,8 @@ defineProps({
 <template>
   <div :class="$style.container">
     <ProductCard
-      v-for="{ title, price, thumbnail, rating } in products"
+      v-for="{ id, title, price, thumbnail, rating } in products"
+      :id="id"
       :title="title"
       :price="price"
       :thumbnail="thumbnail"

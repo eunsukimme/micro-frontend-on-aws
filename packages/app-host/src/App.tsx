@@ -17,6 +17,17 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const goToProductDetail = (event: CustomEvent<{ id: number }>) => {
+      // TODO: change route
+    };
+    window.addEventListener("item-click", goToProductDetail);
+
+    return () => {
+      window.removeEventListener("item-click", goToProductDetail);
+    };
+  }, []);
+
   return (
     <div>
       <h1>This is App Host!</h1>

@@ -1,14 +1,20 @@
 <script lang="ts" setup>
 defineProps({
+  id: { type: Number, required: true },
   title: String,
   price: Number,
   rating: Number,
   thumbnail: String,
 });
+
+const handleClick = (id: number) => {
+  const customClickEvent = new CustomEvent("item-click", { detail: { id } });
+  window.dispatchEvent(customClickEvent);
+};
 </script>
 
 <template>
-  <div :class="$style.container">
+  <div :class="$style.container" @click="handleClick(id)">
     <div :class="$style.thumbnailContainer">
       <img :src="thumbnail" :class="$style.thumbnail" />
     </div>
