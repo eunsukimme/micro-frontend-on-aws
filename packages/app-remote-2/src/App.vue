@@ -1,6 +1,5 @@
 <template>
   <div :class="$style.container">
-    <h1>Trending</h1>
     <div v-if="!products">loading products...</div>
     <div v-else>
       <ProductList :products="products" />

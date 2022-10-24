@@ -1,8 +1,8 @@
-import React, { Suspense, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-const AppRemote1 = React.lazy(() => import("appRemote1/App"));
-
-const App = () => {
+const ProductListPage = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     let app: { unmount(): void };
     async function mountAppRemote2() {
@@ -19,7 +19,8 @@ const App = () => {
 
   useEffect(() => {
     const goToProductDetail = (event: CustomEvent<{ id: number }>) => {
-      // TODO: change route
+      const productId = event.detail.id;
+      navigate(`/${event.detail.id}`, { state: { productId } });
     };
     window.addEventListener("item-click", goToProductDetail);
 
@@ -30,14 +31,12 @@ const App = () => {
 
   return (
     <div>
-      <h1>This is App Host!</h1>
-      <Suspense fallback={"loading..."}>
-        <AppRemote1 />
-      </Suspense>
-
+      <h1 style={{ fontSize: "2rem", margin: "0.67em 0", fontWeight: "bold" }}>
+        Trending
+      </h1>
       <div id="app-remote-2"></div>
     </div>
   );
 };
 
-export default App;
+export default ProductListPage;
