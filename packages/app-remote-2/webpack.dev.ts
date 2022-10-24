@@ -14,15 +14,35 @@ const developmentConfig: Configuration = {
     rules: [
       {
         test: /\.s?css$/,
-        use: [
-          "vue-style-loader",
+        oneOf: [
           {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-            },
+            resourceQuery: /module/,
+            use: [
+              "vue-style-loader",
+              {
+                loader: "css-loader",
+                options: {
+                  importLoaders: 1,
+                  modules: {
+                    localIdentName: "[local]--[hash:base64:5]",
+                  },
+                },
+              },
+              "sass-loader",
+            ],
           },
-          "sass-loader",
+          {
+            use: [
+              "vue-style-loader",
+              {
+                loader: "css-loader",
+                options: {
+                  importLoaders: 1,
+                },
+              },
+              "sass-loader",
+            ],
+          },
         ],
       },
     ],
