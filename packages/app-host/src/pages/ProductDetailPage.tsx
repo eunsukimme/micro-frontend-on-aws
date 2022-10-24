@@ -2,7 +2,7 @@ import AppLayout from "@/components/AppLayout";
 import React, { Suspense } from "react";
 import { useLocation } from "react-router-dom";
 
-const AppRemote1 = React.lazy(() => import("appRemote1/App"));
+const AppOrder = React.lazy(() => import("appOrder/App"));
 
 function ProductDetailPage() {
   const {
@@ -12,7 +12,7 @@ function ProductDetailPage() {
   return (
     <AppLayout>
       <Suspense fallback={"loading..."}>
-        <AppRemote1 productId={productId} />
+        <AppOrder productId={productId} />
       </Suspense>
     </AppLayout>
   );

@@ -2,8 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 
-export const mountAppRemote1 = () => {
-  const id = "app-remote-1";
+export const mountappOrder = () => {
+  const id = "app-order";
   const rootContainer =
     document.getElementById(id) ||
     document.body.appendChild(

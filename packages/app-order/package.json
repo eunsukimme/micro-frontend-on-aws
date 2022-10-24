@@ -1,11 +1,11 @@
 {
-  "name": "app-remote-1",
+  "name": "app-order",
   "version": "1.0.0",
   "description": "",
   "main": "main.ts",
   "scripts": {
-    "build": "WEBPACK_PUBLIC_PATH='/app-remote-1/' webpack build -c webpack.prod.ts",
-    "deploy": "ts-node ../../cli/deploy.ts --app=app-remote-1",
+    "build": "WEBPACK_PUBLIC_PATH='/app-order/' webpack build -c webpack.prod.ts",
+    "deploy": "ts-node ../../cli/deploy.ts --app=app-order",
     "dev": "webpack serve -c webpack.dev.ts"
   },
   "dependencies": {

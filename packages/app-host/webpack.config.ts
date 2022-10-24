@@ -49,7 +49,7 @@ const config: Configuration = {
     new container.ModuleFederationPlugin({
       name: "appHost",
       remotes: {
-        appRemote1: `appRemote1@${getRemoteEntry("app-remote-1", 30001)}`,
+        appOrder: `appOrder@${getRemoteEntry("app-order", 30001)}`,
         appRemote2: `appRemote2@${getRemoteEntry("app-remote-2", 30002)}`,
       },
       shared: {

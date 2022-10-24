@@ -35,7 +35,7 @@ const config: Configuration = {
       "process.env": JSON.stringify(process.env),
     }),
     new container.ModuleFederationPlugin({
-      name: "appRemote1",
+      name: "appOrder",
       filename: "remoteEntry.js",
       exposes: {
         "./App": "./src/App.tsx",

@@ -2,8 +2,8 @@
 
 This is a demo project for AWS Community Day 2022
 
-- `app-host` is React application and host container consuming remote modules from `app-remote-1` and `app-remote-2`.
-- `app-remote-1` is React application and remote container exposing React component.
+- `app-host` is React application and host container consuming remote modules from `app-order` and `app-remote-2`.
+- `app-order` is React application and remote container exposing React component.
 - `app-remote-2` is Vue application and remote container exposing the entire Vue app.
 
 By cloning this repository, you can build and deploy your own micro frontend architecture on AWS. Check details on the following steps.
@@ -69,7 +69,7 @@ After deploying applications, now you can finally see micro frontend application
 
 **Running DEMO** 👉 https://dl120itgchg9q.cloudfront.net
 
-Navigate to `/app-host`, `/app-remote-1` and `/app-remote-2` and see what happens :)
+Navigate to `/app-host`, `/app-order` and `/app-remote-2` and see what happens :)
 
 ## Architecture Diagram
 
@@ -88,7 +88,7 @@ root/
 ├── cli/         # useful commands to manage workspace
 ├── packages/
 │   ├── app-host/      # host conatiner(React)
-│   ├── app-remote-1/  # remote container(React)
+│   ├── app-order/  # remote container(React)
 │   └── app-remote-2/  # remote container(Vue)
 ├── cdk.json
 ├── package.json

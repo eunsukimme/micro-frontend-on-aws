@@ -14,7 +14,7 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "appRemote1/*": ["../app-remote-1/src/*"]
+      "appOrder/*": ["../app-order/src/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"]
