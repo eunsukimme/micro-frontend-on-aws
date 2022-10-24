@@ -17,6 +17,8 @@ export const wrapper = style({
 export const title = style({
   fontSize: "32px",
   fontWeight: "bold",
+  color: "black",
+  textDecoration: "none",
 });
 
 export const github = style({
