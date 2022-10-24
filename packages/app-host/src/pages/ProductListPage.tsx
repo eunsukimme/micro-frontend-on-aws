@@ -1,3 +1,4 @@
+import AppLayout from "@/components/AppLayout";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -30,12 +31,12 @@ const ProductListPage = () => {
   }, []);
 
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+    <AppLayout>
       <h1 style={{ fontSize: "2rem", margin: "0.67em 0", fontWeight: "bold" }}>
         Trending
       </h1>
       <div id="app-remote-2"></div>
-    </div>
+    </AppLayout>
   );
 };
 

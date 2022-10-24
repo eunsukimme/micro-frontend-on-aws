@@ -8,7 +8,7 @@ interface AppProps {
 
 const App = ({ productId }: AppProps) => {
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <div>
       <ProductDetail id={productId} />
     </div>
   );

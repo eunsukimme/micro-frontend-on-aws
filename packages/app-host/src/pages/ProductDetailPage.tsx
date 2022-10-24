@@ -1,3 +1,4 @@
+import AppLayout from "@/components/AppLayout";
 import React, { Suspense } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -9,9 +10,11 @@ function ProductDetailPage() {
   } = useLocation();
 
   return (
-    <Suspense fallback={"loading..."}>
-      <AppRemote1 productId={productId} />
-    </Suspense>
+    <AppLayout>
+      <Suspense fallback={"loading..."}>
+        <AppRemote1 productId={productId} />
+      </Suspense>
+    </AppLayout>
   );
 }
 

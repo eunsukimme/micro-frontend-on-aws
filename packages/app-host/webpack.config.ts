@@ -2,6 +2,7 @@ import { resolve } from "path";
 import { Configuration, DefinePlugin, container } from "webpack";
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
+const { VanillaExtractPlugin } = require("@vanilla-extract/webpack-plugin");
 import { dependencies } from "./package.json";
 import { MicroFrontendStack } from "../../cdk-outputs.json";
 
@@ -60,6 +61,7 @@ const config: Configuration = {
         },
       },
     }),
+    new VanillaExtractPlugin(),
   ],
 };
 
