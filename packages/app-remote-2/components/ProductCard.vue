@@ -52,14 +52,14 @@ const handleClick = (id: number) => {
 }
 .thumbnail {
   width: 100%;
-  height: 110px;
-  max-height: 110px;
+  height: 200px;
+  max-height: 200px;
   object-fit: cover;
   transition: transform 0.3s;
   overflow: hidden;
 }
 .title {
-  margin-top: 4px;
+  margin-top: 10px;
   font-size: 18px;
   height: 40px;
 }

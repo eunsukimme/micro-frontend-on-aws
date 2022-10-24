@@ -26,6 +26,6 @@ defineProps({
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 48px 20px;
 }
 </style>
