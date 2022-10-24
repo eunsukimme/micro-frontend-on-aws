@@ -1,7 +1,10 @@
 <template>
-  <div v-if="!products">loading products...</div>
-  <div v-else :class="$style['product-list']">
-    <ProductList :products="products" />
+  <div :class="$style.container">
+    <h1>Trending</h1>
+    <div v-if="!products">loading products...</div>
+    <div v-else>
+      <ProductList :products="products" />
+    </div>
   </div>
 </template>
 
@@ -19,7 +22,7 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" module>
-.product-list {
+.container {
   max-width: 1200px;
   margin: 0 auto;
 }
