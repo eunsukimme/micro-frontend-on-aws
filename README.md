@@ -8,10 +8,6 @@ This repository includes sample E-commerce application.
 - `app-order` is a React application redering list of products and remote container exposing React component.
 - `app-feed` is Vue application redering detailed description of a product and remote container exposing the entire Vue app.
 
-![Application Diagram 1](/docs/application-diagram-1.png?raw=true "Application Diagram 1")
-
-![Application Diagram 2](/docs/application-diagram-2.png?raw=true "Application Diagram 2")
-
 By cloning this repository, you can build and deploy your own micro frontend architecture on AWS. Check details on the following steps.
 
 ## Requirements
