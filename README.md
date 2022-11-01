@@ -1,10 +1,16 @@
 # Micro Frontend on AWS
 
-This is a demo project for AWS Community Day 2022
+This is a demo project for AWS Community Day 2022.
 
-- `app-host` is React application and host container consuming remote modules from `app-order` and `app-feed`.
-- `app-order` is React application and remote container exposing React component.
-- `app-feed` is Vue application and remote container exposing the entire Vue app.
+This repository includes sample E-commerce application.
+
+- `app-host` is a React application and host container consuming remote modules from `app-order` and `app-feed`.
+- `app-order` is a React application redering list of products and remote container exposing React component.
+- `app-feed` is Vue application redering detailed description of a product and remote container exposing the entire Vue app.
+
+![Application Diagram 1](/docs/application-diagram-1.png?raw=true "Application Diagram 1")
+
+![Application Diagram 2](/docs/application-diagram-2.png?raw=true "Application Diagram 2")
 
 By cloning this repository, you can build and deploy your own micro frontend architecture on AWS. Check details on the following steps.
 
@@ -73,7 +79,7 @@ Navigate to `/`, `/app-order` and `/app-feed` and see what happens :)
 
 ## Architecture Diagram
 
-![Architecture Diagram](/architecture-diagram.png?raw=true "Architecture Diagram")
+![Architecture Diagram](/docs/architecture-diagram.png?raw=true "Architecture Diagram")
 
 ## Directory Structure
 
