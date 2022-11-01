@@ -69,7 +69,7 @@ After deploying applications, now you can finally see micro frontend application
 
 **Running DEMO** 👉 https://dl120itgchg9q.cloudfront.net
 
-Navigate to `/app-host`, `/app-order` and `/app-feed` and see what happens :)
+Navigate to `/`, `/app-order` and `/app-feed` and see what happens :)
 
 ## Architecture Diagram
 
