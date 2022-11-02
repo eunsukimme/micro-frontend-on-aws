@@ -1,14 +1,24 @@
 # Micro Frontend on AWS
 
-This is a demo project for AWS Community Day 2022.
+This is a demo project for AWS Community Day 2022. This repository includes sample E-commerce application.
 
-This repository includes sample E-commerce application.
+## Overview
+
+There are 3 applications to be composed in order to build the E-commerce application.
 
 - `app-host` is a React application and host container consuming remote modules from `app-order` and `app-feed`.
-- `app-order` is a React application redering list of products and remote container exposing React component.
-- `app-feed` is Vue application redering detailed description of a product and remote container exposing the entire Vue app.
+- `app-order` is a React application redering list of products. It is a remote container exposing React component.
+- `app-feed` is Vue application redering detailed description of a product. It is remote container exposing the entire Vue app.
 
-By cloning this repository, you can build and deploy your own micro frontend architecture on AWS. Check details on the following steps.
+![Application Diagram 1](/docs/application-diagram-1-light.jpg?raw=true "Application Diagram 1")
+
+`app-host` has 2 routes, base route(`/`) and product detail route(`/:productId`). Base route imports remote module from `app-feed` and renders product list component. Product detail route imoprts remote module from `app-order` so it renders product detail component.
+
+When a user visits to base route, product list(`app-feed`) will be rendered. If a user clicks an item in product list, route changes to product detail page so user can see description of the product(`app-order`).
+
+![Application Diagram 1](/docs/application-diagram-2-light.jpg?raw=true "Application Diagram 1")
+
+By cloning this repository, you can build and deploy your own E-commerce micro frontend application on AWS. Check details on the following steps.
 
 ## Requirements
 
