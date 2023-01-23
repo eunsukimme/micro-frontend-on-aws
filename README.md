@@ -1,6 +1,6 @@
-# Micro Frontend on AWS
+# Building a Micro Frontend Architecture on AWS
 
-This is a demo project for AWS Community Day 2022. This repository includes sample E-commerce application.
+This project is a demo from the session 'Building a Micro Frontend Architecture on AWS' presented at the AWS Community Day 2022 Seoul ([Youtube](https://youtu.be/FUPlSphkPPs)). This repository includes sample E-commerce application.
 
 ## Overview
 
